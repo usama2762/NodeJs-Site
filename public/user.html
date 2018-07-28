@@ -1,0 +1,107 @@
+ <div id="personal">
+ <ul class="nav nav-pills nav-justified">
+    <li class="active"><a data-toggle="pill" href="#Profile">Profile</a></li>
+    <li><a data-toggle="pill" href="#Requests">Products</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Profile" class="tab-pane fade in active">
+			<div class="container">
+				<br><br><br><br>
+        <div class="col-md-6 col-md-offset-4">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 form-control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" ng-model="profile.email" disabled="disabled">
+                    </div>
+                  </div>
+
+                   <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 form-control-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="name" ng-model="profile.name" disabled="disabled">
+                    </div>
+                  </div>
+
+                   <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 form-control-label">Contact</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="contact" ng-model="profile.contact" disabled="disabled">
+                    </div>
+                  </div>
+
+                    <div class="form-group row">
+                      <div class="col-sm-offset-2 col-sm-10">
+												<button class="btn btn-primary" ng-click="profileC.edit()" id="submit">{{profileC.btn}}</button>
+                        <button class="btn btn-primary" ng-click="profileC.cancelbtn()" ng-show="profileC.cancel" id="submit">Cancel</button>
+                      </div>
+                    </div>
+
+        </div>
+			</div>
+    </div>
+
+     <div id="Requests" class="tab-pane fade">
+			 <div class="container products">
+				 <div class="user-product-add col-md-3" ng-click="productadd()">
+					 <span class="add">Add New Product</span>
+				 </div>
+				 <div class="user-product col-md-3" ng-repeat="x in products">
+					 <img src="{{x.img}}" alt="Link Error" onError="this.onerror=null;this.src='/images/none.png';">
+					 <span class="name">{{x.name}}</span>
+					 <button ng-show="x.accepted" class="btn btn-danger btn-xs remove" ng-click="remove(x.id,i)">remove</button>
+					 <span class="cost">{{'$'+x.cost}}</span>
+				 </div>
+			 </div>
+    </div>
+  </div>
+
+	<div class="modal fade" id="productaddmodal" role="dialog">
+	    <div class="modal-dialog">
+	        <!-- Modal content-->
+	        <div class="modal-content">
+	        <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            <h4 class="modal-title">All Products</h4>
+	        </div>
+	             <div class="modal-body">
+
+								 <form class="form-horizontal" role="form">
+										 <div class="form-group">
+												 <label class="control-label col-sm-2" for="name">Name:</label>
+												 <div class="col-sm-10">
+														 <input type="text" class="form-control" ng-model="product.name" placeholder="Product Name" required>
+												 </div>
+										 </div>
+
+										 <div class="form-group">
+												<label class="control-label col-sm-2" for="name">Image Link:</label>
+												<div class="col-sm-10">
+														<input type="text" class="form-control" ng-model="product.img" placeholder="Image Link of your Ebay Product" required>
+												</div>
+										</div>
+
+										<div class="form-group">
+												<label class="control-label col-sm-2" for="name">Product Link:</label>
+												<div class="col-sm-10">
+														<input type="text" class="form-control" ng-model="product.link" placeholder="Product Link of your Ebay Product" required>
+												</div>
+										</div>
+										<div class="form-group">
+												<label class="control-label col-sm-2" for="name">Product Cost:</label>
+												<div class="col-sm-10">
+														<input type="number" class="form-control" ng-model="product.cost" placeholder="Cost of your Ebay Product in Dollars" required>
+												</div>
+										</div>
+										<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-10">
+														<button ng-click="productsubmit()" class="btn btn-success" id="submit">Submit</button>
+												</div>
+										</div>
+								</form>
+	            </div>
+	         </div>
+	    </div>
+	</div>
+
+  </div>

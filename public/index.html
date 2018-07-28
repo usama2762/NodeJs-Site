@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grnd Gllry</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+<!--Dropdown-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/creative.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" ng-app="myApp" ng-controller="namesCtrl">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".test">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="/" id="brand">Grnd Gllry</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse test" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="#personal">Artists</a>
+                </li>
+                <!-- <li class="dropdown">
+                    <a data-toggle="modal" ng-hide="logged" ng-click="formmodal()">Sign in/Sign up </a>
+                    <a ng-show="logged"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{username}} <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">My Profile</a></li>
+                      </ul>
+                      </a>
+                </li> -->
+                 <li class="dropdown">
+                        <a href="#" data-toggle="modal" ng-hide="logged" ng-click="formmodal()">Sign in/Sign up</a>
+                         <a ng-show="logged"><button class="btn btn-primary dropdown-toggle drop-btn" type="button" data-toggle="dropdown">{{username}} <span class="caret"></span></button>
+                        <div class="dropdown-content" ng-show="logged">
+                          <a href="{{profilelink}}">My Profile</a>
+                          <a href="/api/logout" target="_self">Logout</a>
+                        </div>
+                </li>
+                <!-- <li>
+                    <a href="/api/logout"  ng-show="logged" target="_self"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<header id="head">
+    <div class="header-content">
+        <div class="header-content-inner">
+
+            <a href="#services" class="hide btn btn-primary btn-xl page-scroll" id="know">Find Out More</a>
+        </div>
+    </div>
+</header>
+
+
+<section class="bg-dark" id="personal">
+<div ui-view id="personal"></div>
+</section>
+
+
+
+<section id="services" class="hide">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Play the moments</h2>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-md-4 boxed" ng-repeat="(i,x) in moments | limitTo:3">
+									<div class="bg to_{{x.username}}"></div>
+                    <span><h4><b>Songs of {{x.name}}</b></h4></span>
+                    <ul>
+											<li ng-repeat="y in three(x.songs)" ng-click="play(i,y);console.log('aa')">{{y}}</li>
+                    </ul>
+                    <a class="btn btn-primary" id="all">See all</a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="musicx">
+    <div class="x-control">
+        <div class="wrap">
+            <a class="x-prev" onclick="prev()"></a>
+            <a class="x-playpause" onclick="play()" id="play"></a>
+            <a class="x-next" onclick="next()"></a>
+        </div>
+    </div>
+    <div class="x-info">
+        <div class="x-name">
+            <span class="name"></span>
+        </div>
+        <div class="x-track">
+            <span class="x-start">00:00</span>
+            <!-- <input type="range" class="x-range" /> -->
+						<div id="progress">
+		    			<div id="bar"><div id="ball"></div></div>
+						</div>
+            <span class="x-end">00:00</span>
+        </div>
+    </div>
+    <div class="x-vol">
+			<span class="x-vol-btn"></span>
+				<input type="range" class="x-range" />
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/js/scrollreveal.min.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/creative.js"></script>
+<script src="/js/mc.js"></script>
+<script src="/js/app.js"></script>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Welcome To GRND GLLRY</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#register">Register</a>
+                    </li>
+                    <li><a data-toggle="pill" href="#signin">Sign In</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="register" class="tab-pane fade in active">
+											<form class="form-horizontal" role="form">
+												<div class="alert alert-danger" ng-show="signup.loginerror" role="alert">{{signup.loginerrormsg}}</div>
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="name">Name:</label>
+															<div class="col-sm-10">
+																	<input type="text" class="form-control" ng-model="signup.name" id="name" placeholder="Fullname" required>
+															</div>
+													</div>
+
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="username">Username:</label>
+															<div class="col-sm-10">
+																	<input type="text" class="form-control" ng-model="signup.username" id="username" placeholder="Enter Username" required>
+															</div>
+													</div>
+
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="pwd">Password:</label>
+															<div class="col-sm-10">
+																	<input type="password" class="form-control" ng-model="signup.password" id="pwd" placeholder="Enter password" required>
+															</div>
+													</div>
+
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="email">Email:</label>
+															<div class="col-sm-10">
+																	<input type="email" class="form-control" ng-model="signup.email" id="email" placeholder="Enter Email" required>
+															</div>
+													</div>
+
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="select">Select:</label>
+																	<label class="radio-inline">
+																			<input type="radio" ng-model="signup.type" value="artist" name="optradio">Artist
+																	</label>
+																	<label class="radio-inline">
+																			<input type="radio" ng-model="signup.type" value="user" name="optradio">User
+																	</label>
+													</div>
+
+													<div class="form-group">
+															<div class="col-sm-offset-2 col-sm-10">
+																	<button ng-click="signup.form()" class="btn btn-success" id="submit">Submit</button>
+															</div>
+													</div>
+											</form>
+                    </div>
+                    <div id="signin" class="tab-pane fade">
+											<form class="form-horizontal" role="form">
+
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="username">Type:</label>
+															<div class="col-sm-10"><div class="radio">
+														<label><input type="radio" name="optradio" ng-model="login.type" value="artist" required>Artist</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="optradio" ng-model="login.type" value="user" required>User</label>
+													</div>
+															</div>
+													</div>
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="username">Username:</label>
+															<div class="col-sm-10">
+																	<input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" ng-model="login.username" required>
+															</div>
+													</div>
+													<div class="form-group">
+															<label class="control-label col-sm-2" for="pwd">Password:</label>
+															<div class="col-sm-10">
+																	<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" ng-model="login.password" required>
+															</div>
+													</div>
+													<div class="alert alert-danger" ng-click="loginerror=null" ng-show="loginerror" role="alert">Invalid Username/Password</div>
+													<div class="form-group">
+															<div class="col-sm-offset-2 col-sm-10">
+																	<button ng-click="loginform()" class="btn btn-success" id="submit">Submit</button>
+															</div>
+													</div>
+											</form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<img style="text-decoration:none;border:0;padding:0;margin:0;" src="http://rover.ebay.com/roverimp/1/711-53200-19255-0/1?ff3=4&pub=5575180421&toolid=10001&campid=5337900797&customid=&mpt=[CACHEBUSTER]">
+</body>
+
+</html>

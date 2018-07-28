@@ -1,0 +1,92 @@
+<div class="row" id="pro">
+
+		<div class="col-md-8" id="intro">
+			<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <img src="{{'/uploads/pics/'+artist.username}}" alt="{{username}}" onError="this.onerror=null;this.src='/uploads/pics/blank.png';">
+				    <h3 class="panel-title">{{artist.name}}<div>{{artist.song_type+' - '+artist.band}}</div></h3>
+				  </div>
+				  <div class="panel-body">
+						<div class="bg"></div>
+						<ul style="list-style:none;" id="art_songs">
+							<li ng-repeat="(i,x) in artist.songs" ng-if="x!=''" ng-click="playsong(i)"><i class="fa fa-music" ng-if="songi==i" aria-hidden="false"></i>{{' '+x}}</li>
+						</ul>
+						<div class="request-div">
+							<h3>To display your Product on this page</h3>
+							<button class="btn btn-danger btn-lg" data-toggle="modal" ng-click="view_products()">Click here</button>
+						</div>
+					</div>
+
+			</div>
+		</div>
+
+
+		<div class="col-md-4">
+				<div class="user-product col-md-12" style="margin-left:40px; margin-top:60px;" ng-repeat="x in product_ads |limitTo:4">
+					<a target="_self"
+					 href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575180421&toolid=10001&campid=5337900797&customid=&mpre={{x.url}}">
+					<img src="{{x.img}}" alt="Link Error" onError="this.onerror=null;this.src='/images/none.png';">
+					<span class="name">{{x.name}}</span>
+					<span class="cost">{{'$'+x.cost}}</span>
+				</a>
+				</div>
+				<div class="viewall">
+			<a href="#" class="btn btn-primary" role="button" data-toggle="modal" ng-click="productmodal()" id="viewall">View All</a>
+		</div>
+		</div>
+</div>
+
+<!-- request modal start -->
+<div class="modal fade" id="view_products" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">All Products</h4>
+            </div>
+
+             <div class="modal-body ">
+							 <h4>Please select product you want to request to artist</h4>
+							 <div class="pre-scrollable text-center">
+								 <div class="user-product col-md-3" ng-repeat="x in product" ng-hide="x.sent">
+				 					 <img src="{{x.img}}" alt="Link Error">
+				 					 <span class="name">{{x.name}}</span>
+									 <button class="btn btn-info btn-xs" ng-click="request(x._id)">add</button>
+				 					 <span class="cost">{{'$'+x.cost}}</span>
+		 				 		 </div>
+					 		</div>
+            </div>
+         </div>
+
+    </div>
+</div>
+<!-- request modal end -->
+
+<!-- view all modal start -->
+<div class="modal fade" id="productmodal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        	<h4 class="modal-title">All Products</h4>
+        </div>
+             <div class="modal-body">
+							 <h4>View all the products displayed by this artist</h4>
+							 <div class="pre-scrollable text-center">
+								 <div class="user-product col-md-3" ng-repeat="x in product_ads">
+									 <a target="_self"
+				 					 href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575180421&toolid=10001&campid=5337900797&customid=&mpre={{x.url}}">
+									 <img src="{{x.img}}" alt="Link Error">
+				 					 <span class="name">{{x.name}}</span>
+				 					 <span class="cost">{{'$'+x.cost}}</span>
+								 </a>
+		 				 		 </div>
+					 		</div>
+            </div>
+         </div>
+
+    </div>
+</div>
+<!-- view all modal end -->

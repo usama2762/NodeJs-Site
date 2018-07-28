@@ -1,0 +1,12 @@
+<div class="container text-center">
+        <div class="call-to-action">
+            <h2>New Releases</h2>
+						<div class="scrollhere">
+            <div class="col-md-2 art-box" ng-repeat="x in newrelease">
+							<a href="{{'/profile/'+x.username}}"><div id="art"><img src="{{'/uploads/pics/'+x.username}}" alt=""></div>
+              <div class="text-center">  {{x.name}} </div></a>
+            </div>
+					</div><br>
+					<button class="btn btn-info" style="margin-top:50px;" ng-click="viewall()">{{viewbtn}}</button>
+        </div>
+    </div>

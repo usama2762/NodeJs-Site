@@ -1,0 +1,882 @@
+.header-content #know{
+	margin-top: 350px !important;
+}
+
+#services{
+	/*background-image: url('../img/img2.jpg') !important;*/
+	background: #151515;
+}
+
+#services h2{
+	color: white;
+}
+
+.cards {
+	display:block;
+	margin-top: 20px;
+
+}
+
+.cards .w3-card-8{
+	width: 250px !important;
+	height:300px !important;
+	padding: 20px;
+	margin:20px;
+	background-color: black;
+	opacity: 0.6;
+	color:white;
+
+}
+
+.tracks{
+
+	margin-top: 40px;
+
+}
+.tracks li{
+	margin-bottom: 20px;
+	border-bottom: solid 2px red;
+
+}
+
+.w3-card-8 a{
+	opacity: 1;
+}
+
+/*.wrap {
+		position:relative;
+		margin:0 auto;
+               /*replace 900px with your width
+		width:100%;
+
+
+	}
+*/
+
+
+.musicx{
+	/*background-color: rgb(40, 40, 40);*/
+	background-color: #1a1a1a;
+	border-top-color: rgb(56, 56, 56);
+	border-top-style: solid;
+	border-top-width: 1px;
+	bottom: 119px;
+	/*box-shadow: 2px 10px 10px 14px #151515;*/
+	font-family: proxima_nova_rgregular, arial;
+	font-weight: bold;
+	height: 70px;
+	left: 0px;
+	list-style-type: none;
+	min-width: 1024px;
+	position: fixed;
+	bottom: 0;
+	right: 0px;
+	/*top: 354px;*/
+	width: 100%;
+	z-index: 9990;
+	perspective-origin: 674.5px 35.5px;
+	transform-origin: 674.5px 35.5px;
+	/*background: rgb(40, 40, 40) none repeat scroll 0% 0% / auto padding-box border-box;*/
+	border: ;
+	border-top: 1px solid rgb(56, 56, 56);
+	border-width: 1px 0px 0px;
+	border-color: rgb(56, 56, 56) rgb(0, 0, 0) rgb(0, 0, 0);
+	border-style: solid none none;
+	font: normal normal bold normal 12px / normal proxima_nova_rgregular, arial;
+	list-style: none outside none;
+}
+
+.musicx .x-bg{
+	width: 100%;
+	height:100%;
+	background: url(../images/cover.jpg) no-repeat scroll -10px -10px;
+	background-size: cover;
+	opacity: 0.2;
+	margin-left: 240px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.musicx .x-control{
+	height: 70px;
+	left: 70px;
+	position: absolute;
+	right: 1119px;
+	top: 0px;
+	width: 160px;
+	z-index: 100;
+	perspective-origin: 80px 35px;
+	transform-origin: 80px 35px;
+	border-right: 1px solid rgb(66, 66, 66);
+	/*background: rgba(50, 50, 50, 0.4) none repeat scroll 0% 0% / auto padding-box border-box;*/
+	background-color: #1a1a1a;
+	font: normal normal bold normal 12px / normal proxima_nova_rgregular, arial;
+	list-style: none outside none;
+	padding-left: 12px;
+}
+.musicx .x-control .wrap{
+	padding-top: 20px;
+}
+.musicx .x-prev{
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	left: 0px;
+	opacity: 0.3;
+	position: relative;
+	right: 0px;
+	text-align: center;
+	text-decoration: none;
+	top: 0px;
+	vertical-align: middle;
+	width: 30px;
+	z-index: 0;
+	perspective-origin: 15px 10px;
+	transform-origin: 15px 10px;
+	background: rgba(0, 0, 0, 0) url("../images/playersprite-v1.png") no-repeat scroll 0px -2px / auto padding-box border-box;
+	font: normal normal bold normal 12px / normal proxima_nova_rgregular, arial;
+	list-style: none outside none;
+	margin: 0px 21px 0px 0px;
+}
+.musicx .x-prev:hover{
+	opacity: 1;
+}
+.musicx .x-playpause:hover{
+	opacity: 1;
+}
+
+.musicx .x-vol:hover{
+	opacity: 1;
+}
+
+.musicx .x-playpause{
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	left: 0px;
+	opacity: 0.3;
+	position: relative;
+	right: 0px;
+	text-align: center;
+	text-decoration: none;
+	top: 0px;
+	vertical-align: middle;
+	width: 30px;
+	height: 29px;
+	z-index: 0;
+	perspective-origin: 15px 10px;
+	transform-origin: 15px 10px;
+	background: rgba(0, 0, 0, 0) url("../images/playersprite-v1.png") no-repeat scroll -28px -2px / auto padding-box border-box;
+	font: normal normal bold normal 12px / normal proxima_nova_rgregular, arial;
+	list-style: none outside none;
+	margin: 0px 21px 0px 0px;
+}
+
+
+
+.musicx .x-next{
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	left: 0px;
+	opacity: 0.3;
+	position: relative;
+	right: 0px;
+	text-align: center;
+	text-decoration: none;
+	top: 0px;
+	vertical-align: middle;
+	width: 30px;
+	z-index: 0;
+	perspective-origin: 15px 10px;
+	transform-origin: 15px 10px;
+	background: rgba(0, 0, 0, 0) url("../images/playersprite-v1.png") no-repeat scroll -60px -2px / auto padding-box border-box;
+	font: normal normal bold normal 12px / normal proxima_nova_rgregular, arial;
+	list-style: none outside none;
+}
+.musicx .x-next:hover{
+	opacity: 1;
+}
+
+.musicx .x-info{
+	padding: 0px 145px 0px 250px;
+
+}
+
+.musicx .x-name {
+	padding: 15px 0px 0px 0px;
+	color: #ffffff;
+	margin-top: -7px;
+}
+
+.musicx #progress {
+ width: 800px;
+ position: absolute;
+ bottom: 20px;
+ padding: 0px;
+ background-color: black;
+ border-radius: 25px;
+}
+
+.musicx #ball{
+	position: absolute;
+	top: -2px;
+	right: 100%;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	border-radius: 100%/100%;
+	box-shadow: -1px 0px 4px rgba(0, 0, 0, .8);
+	transition: all 0.1s ease;
+
+}
+.musicx  #bar {
+	position: static;
+	height: 10px;
+	background-color: cyan;
+	width: 0%;
+	border-radius: 25px;
+	transition: all 0.1s ease;
+}
+
+.musicx .x-info .x-track{
+	padding: 0px 50px 0px 50px;
+}
+
+.musicx .x-info .x-start{
+	color: #ffffff;
+	position: absolute;
+	bottom: 18px;
+	left: 249px;
+}
+
+.musicx .x-info .x-end{
+	color: #ffffff;
+	position: absolute;
+	bottom: 18px;
+right: 208px;
+}
+
+
+.musicx .x-vol {
+		float: right;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    width: 100px;
+		right: 78px;
+    z-index: 0;
+    margin: -15px 21px 0px 0px;
+}
+.musicx .x-vol input{
+	position: relative;
+	top:-17px;
+	left: 30px;
+}
+.musicx .x-vol .x-vol-btn{
+	cursor: pointer;
+display: inline-block;
+left: 0px;
+opacity: 0.3;
+position: relative;
+right: 0px;
+text-align: center;
+text-decoration: none;
+top: 0px;
+vertical-align: middle;
+width: 22px;
+height: 24px;
+z-index: 0;
+perspective-origin: 15px 10px;
+transform-origin: 15px 10px;
+background: rgba(0, 0, 0, 0) url("../images/playersprite-v1.png") no-repeat scroll -19px -58px / auto padding-box border-box;
+font: normal normal bold normal 12px / normal proxima_nova_rgregular, arial;
+list-style: none outside none;
+margin: 0px 21px 0px 0px;
+transform: scale(1.1);
+}
+
+
+#services ul{
+	list-style: none;
+	    opacity: 1 !important;
+	        margin-top: 45px;
+}
+#services li{
+	padding-top: 36px;
+	border-bottom: 1px solid #383838;
+	opacity: 1 !important;
+
+}
+.boxed{
+	 width: 300px;
+    padding: 10px;
+    color: #c4c4c4;
+    border-radius: 3px;
+    background-color:#2f2f2f;
+    margin: 0;
+    height: 300px;
+    padding-left: 20px;
+    margin-left: 80px;
+    opacity: 1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+     /*box-shadow: 10px 10px 5px #AC88BB;*/
+}
+
+
+.boxed span{
+	margin-left: 18px;
+    float: inherit;
+    /*border-radius: 7px;*/
+    /*border: 2px solid #AD218F;*/
+    /*background: #AD218F;*/
+    /*background: #ee4b28;*/
+    padding: 20px;
+    /*width: 209px;*/
+    /*height: 10px;*/
+opacity: 1 !important;
+/*z-index: 9999;*/
+}
+
+/*.boxed ul{
+z-index: 9999;
+}*/
+
+#services span p{
+	position: absolute;
+	    margin-top: -15px;
+opacity: 1 !important;
+color: #c4c4c4;
+}
+/*
+.boxed .back{
+
+width: 100%;
+height: 100%;
+background: #000;
+opacity: 0.8;
+position: absolute;
+z-index: -1;
+
+}*/
+
+.boxed #all{
+	background: black;
+	position: absolute;
+	margin-left: 90px;
+	margin-top: 3px;
+
+	width: 80px;
+	font-style: normal;
+	color: #c4c4c4;
+	border-radius: 29px;
+
+}
+
+#brand{
+
+	font-family: 'Hammersmith One', sans-serif !important;
+}
+
+
+.art-box{
+    width: 146px;
+    padding: 10px;
+    color: #c4c4c4;
+    border-radius: 3px;
+    margin: 0;
+    height: 155px;
+    padding-left: 20px;
+    margin-left: 80px;
+    font-style: italic;
+    opacity: 1;
+        margin-top: 98px;
+    margin-bottom: 5px;
+
+}
+
+/*#art img{
+	position: absolute;
+	height: 100px;
+	width: 80px;
+
+}*/
+
+
+div #regist {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+
+.modal-body ul{
+	margin-left: 192px;
+}
+
+.modal{
+	z-index: 9999999;
+}
+
+.modal-body{
+height: auto;
+}
+
+.modal-body a{
+	color: black;
+}
+
+.form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 38px;
+}
+ #submit{
+ 		margin-top: 10px;
+	    border-radius: 4px;
+    margin-left: 111px;
+    height: 50px;
+    width: 80px;
+}
+
+.form-group .radio-inline{
+	margin-left: 20px;
+}
+
+.modal-header{
+
+	background: black;
+	color: white;
+}
+.modal-body{
+	color: black;
+}
+
+ .close{
+ 	background: white;
+	color: white;
+}
+
+.close:hover{
+
+	color: red;
+}
+
+body {
+	padding-right: 0px !important;
+}
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #b73e33;
+}
+
+#about {
+	height: auto !important;
+}
+
+#personal {
+	height: auto;
+	/*padding-bottom: 120px;*/
+}
+
+
+#Songs input{
+	/*display: inline;*/
+	margin-left: 2px;
+}
+
+.inputs{
+	margin-top: 134px;
+	margin-left: 300px;
+  }
+
+.inputs li{
+	padding-bottom: 20px;
+}
+.inputs input{
+	display: inline-block;
+}
+
+.inputs input[type=text]{
+	width: 300px;
+}
+
+.songframe{
+display: inline-block;
+}
+.songframe #rmv{
+	margin-left: 40px;
+}
+
+.form-control{
+	width: 70%;
+}
+
+
+.editform{
+	margin-top: 55px;
+}
+
+
+
+.panel-default>.panel-heading {
+    font-size: 40px !important;
+    color: #c4c4c4;
+    background:#252424;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.panel-default .panel-heading .panel-title div{
+    font-size: 20px !important;
+    color: #c4c4c4;
+    background:#252424;
+		margin-top: 5px;
+}
+
+.panel-body {
+    padding: 15px;
+    height: 800px;
+    height: 5;
+    color:#c4c4c4;
+    background: #151515;
+		z-index: 99999999;
+}
+.panel-body h3{
+	margin-top: 600px;
+	margin-left: 200px;
+}
+.panel-body button{
+	margin-left: 350px;
+	z-index: -999999;
+}
+.panel{
+	margin-bottom: 50px;
+	border-color: #535353;
+}
+.panel .panel-body .bg{
+	position: absolute;
+	background-image: url('/images/yoyo.jpg');
+	width: 94%;
+	height: 75%;
+	opacity: 0.3;
+	filter: blur(5px);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+
+#services .bg{
+
+		position: absolute;
+		top:0;
+		left: 0;
+		/*background-image: url('/images/unnamed.png');*/
+		background-color:  rgb(117, 209, 228);
+		width: 100%;
+		height: 100%;
+		opacity: 0.2;
+		filter: blur(10px);
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 0;
+}
+#art_songs{
+		position: absolute;
+		margin-top: 20px;
+		margin-left: -40px;
+		font-size: 15px;
+}
+#art_songs li:hover{
+ /*background: rgba(0, 0, 0, 0.5);*/
+ background-color: rgba(0, 0, 0, 0.3);
+/*color: black;*/
+
+}
+
+#art_songs li{
+	margin-top: 20px;
+	padding-bottom: 20px;
+	padding: 0.8em 0em 1em 12em;
+	transition: all 0.3s ease;
+	width: 840px;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 31px;
+    color: inherit;
+    margin-left: 250px;
+    position: absolute;
+    margin-top: -120px;
+}
+
+#personal .row{
+	margin-bottom: 17px;
+}
+
+.panel-heading img
+{     vertical-align: middle;
+	height: 140px;
+	    height: 2;
+ }
+
+
+ .col-sm-6{
+ 	width: 250px;
+ 	    margin-left: 80px;
+ 	    margin-top: 57px;
+ }
+
+ .col-sm-6 img{
+ 	/*margin-right: 30px;*/
+ 	width:290px;
+ 	height: 150px;
+ 	margin-bottom: -35px;
+ 	margin-top: -1px;
+ 	margin-left: 15px;
+    padding-bottom: 34px;
+    padding-right: 32px
+ }
+
+.caption{
+ 	margin-bottom: 40px;
+ }
+
+ .caption h3{
+ 	color: #c4c4c4;
+ }
+
+ .thumbnail{
+ 	height: 220px;
+ 	background-color: #151515;
+ }
+
+ #pro{
+ 	    margin-right: -15px;
+    margin-left: 13px;
+    margin-top: -63px;
+ }
+
+
+ .navbar-default.affix {
+    background-color: rgb(117, 209, 228) !important;
+    border-color: rgba(34, 34, 34, 0.05);
+}
+
+.navbar-default.affix .navbar-header .navbar-brand {
+    color: #292626 !important;
+    font-size: 20px !important;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.products{
+	margin-top: 50px;
+}
+
+.user-product-add {
+	width: 200px;
+	height: 200px;
+	border-radius: 5px;
+	background-color: gray;
+	display: inline-block;
+	margin: 5px;
+	transition: all .5s ease-out;
+}
+.user-product-add:hover{
+	opacity: 0.5;
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+}
+.user-product-add i{
+	position: relative;
+	top: 50px;
+	left: 70px;
+}
+.user-product-add .add{
+	position: relative;
+	top: 80px;
+	left: 8px;
+	font-size: 19px;
+}
+
+.user-product {
+	width: 200px;
+	height: 200px;
+	border-radius: 5px;
+	background-color: gray;
+	display: inline-block;
+	margin: 5px;
+}
+.user-product img{
+	width: 190px;
+	height: 170px;
+	position: relative;
+	top: 2px;
+	left: -10px;
+}
+.user-product .name{
+	position: absolute;
+	bottom: 2px;
+	left: 5px;
+}
+.user-product .cost{
+	position: absolute;
+	bottom: 2px;
+	right: 5px;
+}
+.user-product a{
+	color: white;
+}
+.viewall{
+	position: absolute;
+	bottom: -50px;
+	left: 100px;
+}
+
+.request {
+	position: static;;
+	top:200px;
+	left: 30px;
+	width: auto;
+	height: auto;
+}
+.request .intro{
+	margin-left: 150px;
+	margin-right: 150px;
+}
+.request .intro button{
+	margin-left: 210px;
+	margin-top: 30px;
+}
+#add{
+	margin-bottom: -110px;
+}
+
+#view_products .modal-dialog{
+	width: 900px;
+}
+#view_products .user-product button{
+	z-index: 999;
+	margin-top: 7px;
+	position: absolute;
+}
+#view_products .user-product .name{
+	z-index: 1 !important;
+}
+#Requests .user-product button{
+	z-index: 999;
+	margin-top: -20px;
+	position: absolute;
+}
+#Requests .user-product .accept{
+	margin-left: 20px;
+}
+#Requests .user-product .reject{
+	margin-left: 80px;
+}
+#Requests .user-product .remove{
+	margin-left: 55px;
+}
+
+#productmodal .modal-dialog{
+	width: 900px;
+}
+
+.pic {
+	margin-top: 50px;
+}
+.pic img{
+	width: 200px;
+	height: 200px;
+}
+.pic .btn{
+	margin-top: 20px;
+}
+.pic .label{
+	position: relative;
+	bottom: -10px;
+	right: -5px;
+	margin-right: 5px;
+}
+
+#art{
+	width: 146px;
+	height: 155px;
+	color: transparent;
+}
+
+#art img{
+	border-radius: 146px/155px;
+	position: relative;
+	width: 146px;
+	height: 155px;
+	top: -9px;
+	right: 20px;
+	transition: all 0.3s ease-out;
+}
+
+#art img:hover{
+	transform: scale(1.1);
+}
+/*.art-box a{
+	position: absolute;
+right: 35px;
+bottom: 3px;
+
+}*/
+
+.request-div{
+	position: relative;
+	bottom: -30px;
+}
+
+.rmbtn{
+	position: absolute;
+}

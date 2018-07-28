@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing</title>
+	<style type="text/css">
+		input{
+			display: block;
+		}
+		.login{
+			right: 30%;
+			top: 10%;
+			position: absolute;
+			margin:5px;
+		}
+		.signup{
+			top: 10%;
+			left: 30%;
+			margin: 5px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+<form class="signup" action="/api/users/register" method="post">
+<h2>Registration</h2>
+	username:<input type="text" name="username">
+	pasword:<input type="text" name="password">
+	email:<input type="text" name="email">
+	f_name:<input type="text" name="fname">
+	l_name:<input type="text" name="lname">
+	type:<input type="radio" name="type" value="artist"> artist
+	<input type="radio" name="type" value="user"> user
+	<input type="submit" name="">
+</form>
+<form class="login" action="/api/users/login" method="post">
+<h2>Login</h2>
+	type:<input type="radio" name="type" value="artist"> artist
+	<input type="radio" name="type" value="user"> user<br>
+	username:<input type="text" name="username">
+	pasword:<input type="text" name="password">
+	<input type="submit" name="">
+</form>
+<form id        =  "uploadForm"
+     enctype   =  "multipart/form-data"
+     action    =  "/api/artistprofile/song?id=5"
+     method    =  "post">
+	<input type="file" name="song" />
+	<input type="text" name="name">
+	<input type="submit" value="Upload Image" name="submit">
+</form>
+<form action="/api/userprofile/productadd" method="post">
+	name:<input type="text" name="name">
+	detail:<input type="text" name="detail">
+	url:<input type="text" name="url">
+	<input type="submit">
+</form>
+<form action="/api/artistprofile/pic" method="post" enctype="multipart/form-data">
+<input type="file" name="pic">
+<input type="submit">
+</form>
+<a target="_self"
+ href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575180421&toolid=10001&campid=5337900797&customid=&mpre=https%3A%2F%2Fwww.ebay.in%2Fpdt%2FSony-Xperia-C5-Ultr%2F216297076">
+ Click</a>
+<img style="text-decoration:none;border:0;padding:0;margin:0;" src="http://rover.ebay.com/roverimp/1/711-53200-19255-0/1?ff3=4&pub=5575180421&toolid=10001&campid=5337900797&customid=&mpt=[CACHEBUSTER]">
+</body>
+</html>
